@@ -1,0 +1,147 @@
+#after-login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.after-login__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 150px;
+  height: 20px;
+  margin-left: 3px;
+}
+
+.search-engine {
+  border: none;
+  background: transparent;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather div:first-child {
+  display: flex;
+}
+
+.clock {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.after-login__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wlcome-message {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.after-login__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.quote span:first-child {
+  margin-bottom: 7px;
+}
+
+.todo-list-area {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.todo-btn,
+.delBtn {
+  border: none;
+  background: transparent;
+}
+
+.todo-list-box {
+  width: 170px;
+  height: 250px;
+  margin-bottom: 10px;
+  background-color: rgba(100, 100, 100, 0.2);
+  border-radius: 7px;
+  padding: 7px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -260px;
+}
+
+.todo-list-box__top {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.checkbox {
+  width: 12px;
+  height: 12px;
+  border-radius: 30%;
+  background-color: white;
+  border: 1px solid gray;
+  margin-right: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.todo {
+  width: 80%;
+}
+
+.todo-input {
+  font-size: 12px;
+  width: 95%;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+.todo-input::placeholder {
+  color: rgb(180, 180, 180);
+}
