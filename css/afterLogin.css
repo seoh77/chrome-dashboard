@@ -31,10 +31,21 @@
 .weather {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+
+.weather-icon {
+  margin-right: 5px;
 }
 
 .weather div:first-child {
   display: flex;
+  margin-bottom: 3px;
+}
+
+.location {
+  font-size: 13px;
 }
 
 .clock {
