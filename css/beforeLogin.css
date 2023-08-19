@@ -15,10 +15,12 @@
 
 .input__name {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1.5px solid white;
   width: 300px;
   height: 50px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
+  background: transparent;
+  color: white;
 }

@@ -8,6 +8,10 @@
 body {
   font-family: "Nunito", sans-serif;
   font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 input:focus {

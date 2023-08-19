@@ -26,6 +26,7 @@
 .search-engine {
   border: none;
   background: transparent;
+  color: white;
 }
 
 .weather {
@@ -49,8 +50,8 @@
 }
 
 .clock {
-  font-size: 100px;
-  font-weight: 700;
+  font-size: 130px;
+  font-weight: 600;
 }
 
 .after-login__main {
@@ -60,7 +61,7 @@
 }
 
 .wlcome-message {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   margin-top: 15px;
 }
@@ -96,6 +97,11 @@
 .delBtn {
   border: none;
   background: transparent;
+}
+
+.logout_btn,
+.todo-btn {
+  color: white;
 }
 
 .todo-list-box {
