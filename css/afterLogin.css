@@ -76,11 +76,13 @@
 .quote {
   display: flex;
   flex-direction: column;
-  font-size: 13px;
+  align-items: center;
+  font-size: 11px;
 }
 
 .quote span:first-child {
   margin-bottom: 7px;
+  font-size: 14px;
 }
 
 .todo-list-area {
