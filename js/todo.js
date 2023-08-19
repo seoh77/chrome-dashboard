@@ -30,16 +30,37 @@ function deleteTodo(event) {
   saveTodos();
 }
 
-function checkTodos(event) {
-  const li = event.target.parentElement;
-  const checkedDiv = li.children[1];
+function paintCheck(checkTodo) {
+  const all_li = document.querySelectorAll(".todo-item");
+  let li;
 
-  if (checkedDiv.classList.contains(CHECKED_CLASS)) {
-    li.children[0].innerText = "";
-    checkedDiv.classList.remove(CHECKED_CLASS);
-  } else {
-    li.children[0].innerText = "✔️";
-    checkedDiv.classList.add(CHECKED_CLASS);
+  for (let i = 0; i < all_li.length; i++) {
+    if (parseInt(all_li[i].id) === checkTodo.id) {
+      li = all_li[i];
+    }
+  }
+
+  const checkbox = li.children[0];
+  const checktodo = li.children[1];
+
+  if (checkTodo.checked === 1) {
+    checkbox.innerText = "✔️";
+    checktodo.classList.add(CHECKED_CLASS);
+  } else if (checkTodo.checked === 0) {
+    checkbox.innerText = "";
+    checktodo.classList.remove(CHECKED_CLASS);
+  }
+}
+
+function checkTodoSave(event) {
+  const li = event.target.parentElement;
+
+  for (let i = 0; i < todos.length; i++) {
+    if (todos[i].id === parseInt(li.id)) {
+      todos[i].checked = todos[i].checked === 1 ? 0 : 1;
+      saveTodos();
+      paintCheck(todos[i]);
+    }
   }
 }
 
@@ -50,7 +71,7 @@ function paintTodos(newTodo) {
 
   const checkboxElem = document.createElement("button");
   checkboxElem.classList.add("checkbox");
-  checkboxElem.addEventListener("click", checkTodos);
+  checkboxElem.addEventListener("click", checkTodoSave);
 
   const todoElem = document.createElement("div");
   todoElem.classList.add("todo");
@@ -75,6 +96,7 @@ function handleTodoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
+    checked: 0,
   };
   todos.push(newTodoObj);
   paintTodos(newTodoObj);
@@ -89,6 +111,7 @@ if (savedTodos !== null) {
   const parsedTodos = JSON.parse(savedTodos);
   todos = parsedTodos;
   parsedTodos.forEach(paintTodos);
+  parsedTodos.forEach(paintCheck);
 }
 
 todoBtn.addEventListener("click", todoBtnClick);
