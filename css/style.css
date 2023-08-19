@@ -13,3 +13,11 @@ body {
 input:focus {
   outline: none;
 }
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
