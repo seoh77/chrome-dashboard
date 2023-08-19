@@ -97,10 +97,6 @@
 .delBtn {
   border: none;
   background: transparent;
-}
-
-.logout_btn,
-.todo-btn {
   color: white;
 }
 
@@ -147,11 +143,18 @@
   border: 1px solid gray;
   margin-right: 5px;
   font-size: 11px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo {
   width: 80%;
+}
+
+.checked {
+  text-decoration: line-through;
+  font-style: italic;
 }
 
 .todo-input {
