@@ -78,7 +78,7 @@
   align-items: end;
 }
 
-/* .logout_btn, */
+.logout_btn,
 .todo-btn,
 .delBtn {
   border: none;
