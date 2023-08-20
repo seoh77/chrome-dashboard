@@ -85,12 +85,18 @@
 .quote span:first-child {
   margin-bottom: 7px;
   font-size: 14px;
+  font-style: italic;
 }
 
 .todo-list-area {
   display: flex;
   flex-direction: column;
   align-items: end;
+}
+
+.logout_btn,
+.todo-btn {
+  font-size: 15px;
 }
 
 .logout_btn,
@@ -167,5 +173,5 @@
 }
 
 .todo-input::placeholder {
-  color: rgb(180, 180, 180);
+  color: rgb(220, 220, 220);
 }
